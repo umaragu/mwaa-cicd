@@ -61,8 +61,10 @@ def testWorkflow():
             command="local-runner",
             links={postgres.name:postgres.name},
         ) 
+        print("everything started")
         initDB(mwaa)
         testRequirements(mwaa, requirements)
+        print("testRequirements")
         runIntegrityTest(mwaa)
         runUnitTest(mwaa)
         print("All test done")
