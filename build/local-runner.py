@@ -12,8 +12,8 @@ This runs mwaa local image and the DB. After they are run, it runs the DAG integ
 returns non-zero exit code if the test fails
 """
 def testWorkflow():
-    mwaa_image=account+".dkr.ecr."+region+".amazonaws.com/mwaa-local-image:latest"
-    mwaa_db_image=account+".dkr.ecr."+region+".amazonaws.com/mwaa-local-db:latest"
+    mwaa_image=account+".dkr.ecr."+region+".amazonaws.com/mwaa-local-test:2.0.2"
+    mwaa_db_image=account+".dkr.ecr."+region+".amazonaws.com/mwaa-db:10"
     mwaa = None
     postgres = None
     try:
